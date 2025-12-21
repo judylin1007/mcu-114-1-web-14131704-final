@@ -1,0 +1,19 @@
+:root {
+  --search-bar-display: flex;
+  --book-min-width: 256px;
+  --container-padding-left: 2rem;
+  --container-padding-right: 2rem;
+  --nav-display: flex;
+
+  @media screen and (max-width: 1024px) {
+    --search-bar-display: none;
+    --aside-display: none;
+    --book-min-width: 200px;
+  }
+
+  @media screen and (max-width: 640px) {
+    --container-padding-left: 1.5rem;
+    --container-padding-right: 1.5rem;
+    --nav-display: none;
+  }
+}
