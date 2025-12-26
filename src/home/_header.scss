@@ -1,0 +1,40 @@
+@use "../common";
+
+header {
+  border-bottom: solid 1px var(--border-color);
+  background-color: var(--background-color);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  div.container > div {
+    gap: 2rem;
+  }
+
+  h3 {
+    margin: 0px;
+    @include common.fontStyle(var(--header-heading-font-size), 700, 1.75rem);
+    color: var(--primary-color);
+  }
+
+  nav {
+    display: var(--nav-display);
+    gap: var(--nav-gap);
+
+    .active {
+      position: relative;
+      color: var(--primary-color);
+
+      &::after {
+        content: "";
+        width: 5px;
+        height: 5px;
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        position: absolute;
+        left: calc(50% - 2.5px);
+        bottom: -8px;
+      }
+    }
+  }
+}
