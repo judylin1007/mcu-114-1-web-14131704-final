@@ -1,5 +1,11 @@
 @use "../color";
 @use "../variable";
+@use "./main";
+@use "./home";
+@use "./header";
+@use "./contact";
+@use "./about";
+@use "./footer";
 
 html,
 body {
