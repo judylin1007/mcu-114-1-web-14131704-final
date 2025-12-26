@@ -1,0 +1,44 @@
+@use "../common";
+
+div {
+  &.content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--contact-margin-bottom);
+  }
+
+  &.form {
+    display: grid;
+    grid-template-columns: var(--contact-form-grid-column);
+    grid-template-rows: var(--contact-form-grid-rows);
+    gap: 10px;
+  }
+
+  input,
+  textarea {
+    background: transparent;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    padding: 15px 20px;
+  }
+
+  textarea {
+    grid-column: var(--contact-textarea-grid-column);
+    resize: none;
+  }
+
+  button {
+    justify-self: center;
+    grid-column: var(--contact-button-grid-column);
+    @include common.fontStyle(1rem, 500, 1.25rem);
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+
+    i {
+      margin-left: 10px;
+    }
+  }
+}
