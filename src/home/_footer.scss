@@ -1,0 +1,37 @@
+@use "../common";
+
+footer {
+  border-top: 1px solid var(--border-color);
+  padding-block: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+
+  h3 {
+    margin: 0;
+    @include common.fontStyle(1.5rem, 500, 3rem);
+    color: var(--header-color);
+  }
+
+  nav {
+    display: var(--nav-display);
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  div {
+    &.icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    &.copy-right {
+      @include common.fontStyle(0.875rem, 400, 1rem);
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
