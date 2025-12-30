@@ -80,29 +80,35 @@ div {
   }
 
   &.skills {
+    width: fit-content;
     margin-right: var(--skills-margin-right);
-    width: var(--skills-width);
-    display: flex;
+    display: grid;
     flex-direction: column;
+    grid-template-columns: repeat(2, minmax(0, 650px));
     gap: 2rem;
+    margin: 0 auto;
+    justify-content: center;
 
     .item {
       display: flex;
       flex-direction: column;
       gap: 5px;
+      width: 100%;
 
       .skill {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-weight: 500;
       }
 
       .progress {
         height: 10px;
         border: solid 1px #ccc;
+        width: 100%;
 
         .progress-bar {
-          height: 10px;
+          height: 12px;
           background-color: var(--primary-color);
         }
       }
