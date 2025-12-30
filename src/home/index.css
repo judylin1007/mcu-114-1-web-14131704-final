@@ -17,7 +17,7 @@
   --container-padding-right: 2rem;
   --header-heading-font-size: 1.25rem;
   --nav-display: flex;
-  --nav-gap: 1.5rem;
+  --nav-gap: 3rem;
   --home-heading-font-size: 2rem;
   --home-image-width: 300px;
   --home-flex-justify-content: space-between;
@@ -211,10 +211,14 @@ header {
   z-index: 50;
 }
 header div.container > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   gap: 2rem;
 }
 header h3 {
-  margin: 0px;
+  margin: 0;
   font-size: var(--header-heading-font-size);
   font-weight: 700;
   line-height: 1.75rem;
@@ -237,6 +241,26 @@ header nav .active::after {
   position: absolute;
   left: calc(50% - 2.5px);
   bottom: -8px;
+}
+header div.header-button {
+  display: var(--header-button-display, flex);
+}
+header div.header-button button {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--gray-color-100);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header div.header-button button:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 
 footer {
