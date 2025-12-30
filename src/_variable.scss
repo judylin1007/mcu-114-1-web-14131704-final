@@ -11,6 +11,7 @@
   --home-flex-justify-content: space-between;
   --home-width: 50%;
   --about-flex-justify-content: space-between;
+  --about-align-items: flex-start;
   --introduce-width: 50%;
   --introduce-card-margin-left: 4rem;
   --skills-margin-right: 4rem;
@@ -25,7 +26,7 @@
     --home-image-width: 250px;
     --about-flex-direction: column;
     --about-flex-justify-content: center;
-    --about-align-items: center;
+    --about-align-items: flex-start;
     --introduce-width: 65%;
     --introduce-card-margin-left: 0rem;
     --skills-margin-right: 0rem;

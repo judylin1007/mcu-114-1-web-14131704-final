@@ -23,6 +23,7 @@
   --home-flex-justify-content: space-between;
   --home-width: 50%;
   --about-flex-justify-content: space-between;
+  --about-align-items: flex-start;
   --introduce-width: 50%;
   --introduce-card-margin-left: 4rem;
   --skills-margin-right: 4rem;
@@ -38,7 +39,7 @@
     --home-image-width: 250px;
     --about-flex-direction: column;
     --about-flex-justify-content: center;
-    --about-align-items: center;
+    --about-align-items: flex-start;
     --introduce-width: 65%;
     --introduce-card-margin-left: 0rem;
     --skills-margin-right: 0rem;
@@ -342,8 +343,9 @@ div.content {
   align-items: var(--about-align-items);
   gap: 50px;
 }
-div.introduce {
+div.introduce, div.education {
   width: var(--introduce-width);
+  text-align: center;
 }
 div.introduce div.card {
   display: flex;
@@ -357,14 +359,49 @@ div.introduce div.card {
   box-shadow: 1px 8px 10px 2px rgba(0, 0, 0, 0.1);
 }
 div.introduce div.card h3 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.25rem;
-  color: var(--primary-color);
+  color: var(--header-color);
 }
 div.introduce div.card > div {
   padding-inline: 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--text-color);
+}
+div .education {
+  width: 48%;
+  margin-top: 1rem;
+}
+div .education h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  color: var(--header-color);
+}
+div .education .edu-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+div .education .edu-list li {
+  margin-bottom: 1rem;
+}
+div .education .edu-list li .school-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+div .education .edu-list li .school-box i {
+  font-size: 0.5rem;
+  color: var(--primary-color);
+}
+div .education .edu-list li .school-box .school {
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.5rem;

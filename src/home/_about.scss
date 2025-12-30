@@ -9,9 +9,13 @@ div {
     gap: 50px;
   }
 
-  &.introduce {
+  &.introduce,
+  &.education {
     width: var(--introduce-width);
+    text-align: center;
+  }
 
+  &.introduce {
     div.card {
       display: flex;
       flex-direction: column;
@@ -24,15 +28,53 @@ div {
       box-shadow: 1px 8px 10px 2px rgba($color: #000, $alpha: 0.1);
 
       h3 {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         @include common.fontStyle(1.5rem, 600, 1.25rem);
-        color: var(--primary-color);
+        color: var(--header-color);
       }
 
       > div {
         padding-inline: 1.5rem;
         @include common.fontStyle(1.125rem, 400, 1.5rem);
         color: var(--text-color);
+      }
+    }
+  }
+
+  .education {
+    width: 48%;
+    margin-top: 1rem;
+
+    h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+      @include common.fontStyle(1.5rem, 600, 1.25rem);
+      color: var(--header-color);
+    }
+
+    .edu-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 1rem;
+
+        .school-box {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          i {
+            font-size: 0.5rem;
+            color: var(--primary-color);
+          }
+
+          .school {
+            @include common.fontStyle(1.125rem, 400, 1.5rem);
+            color: var(--text-color);
+          }
+        }
       }
     }
   }
