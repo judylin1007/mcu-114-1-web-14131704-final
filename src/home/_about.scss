@@ -1,5 +1,4 @@
 @use "../common";
-
 div {
   &.content {
     display: flex;
@@ -42,8 +41,9 @@ div {
   }
 
   .education {
-    width: 48%;
+    width: var(--education-width, 48%);
     margin-top: 1rem;
+    text-align: var(--edu-text-align, center);
 
     h3 {
       text-align: center;
